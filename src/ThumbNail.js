@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const ThumbNail = ({ id, image, name, type, _callback }) => {
+const ThumbNail = ({ id, image, name, type }) => {
   const style = type + " thumb-container";
   return (
-    <div className={style}>
+    <Link to={`/${id}`} className={style}>
       <div className="number">
         <small>#0{id}</small>
       </div>
@@ -12,7 +13,7 @@ const ThumbNail = ({ id, image, name, type, _callback }) => {
         <h3>{name}</h3>
         <small>Type: {type}</small>
       </div>
-    </div>
+    </Link>
   );
 };
 

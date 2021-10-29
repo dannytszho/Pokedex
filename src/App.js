@@ -8,13 +8,13 @@ function App() {
     <div className="app-container">
       <BrowserRouter>
         <Switch>
+          <Route path="/:id">
+            <Pokemon />
+          </Route>
           <Route path="/">
             <Pokedex />
           </Route>
         </Switch>
-        <Route path="/:id">
-          <Pokemon />
-        </Route>
       </BrowserRouter>
     </div>
   );

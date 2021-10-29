@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import ThumbNail from "./ThumbNail";
 
-const Pokedex = () => {
+const Pokedex = (props) => {
   const [pokemons, setPokemons] = useState([]);
   const [loadmore, setLoadmore] = useState(
     "https://pokeapi.co/api/v2/pokemon?limit=30"
   );
+  const { id } = props;
 
   async function fetchAllPokemons() {
     const res = await fetch(loadmore);
@@ -35,7 +36,7 @@ const Pokedex = () => {
   return (
     <div>
       <div className="pokemon-container">
-        <div className="all-container">
+        <div className="all-container" Link to={`/${id}`}>
           {pokemons.map((pokemon, index) => (
             <ThumbNail
               id={pokemon.id}
