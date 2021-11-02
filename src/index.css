@@ -11,6 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 .search-container {
   display: flex;
   justify-content: center;
@@ -20,6 +21,10 @@ code {
 .search-element {
   flex-basis: 20%;
   margin: 10px;
+=======
+.info-bar {
+  display: flex;
+
 }
 .app-contaner {
   display: flex;
