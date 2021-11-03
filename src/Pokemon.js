@@ -97,6 +97,7 @@ class Pokemon extends Component {
       ability_2,
       url_1,
       url_2,
+      // eslint-disable-next-line
       locations,
       saved,
     } = this.state;
